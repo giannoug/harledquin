@@ -1,0 +1,6 @@
+firmware/data/
+
+interface/node_modules/
+interface/bower_components/
+interface/build/
+interface/package/

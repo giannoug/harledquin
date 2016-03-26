@@ -1,0 +1,26 @@
+{
+  "name": "harledquin",
+  "description": "Web interface for the HarLEDquin project",
+  "authors": [
+    "giannoug <giannoug@gmail.com>"
+  ],
+  "license": "WTFPL",
+  "homepage": "https://github.com/giannoug/harledquin",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-websocket": "^1.0.14",
+    "milligram": "^1.1.0"
+  },
+  "overrides": {
+    "angular": {
+      "main": "angular.min.js"
+    }
+  }
+}

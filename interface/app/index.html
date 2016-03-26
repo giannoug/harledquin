@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="HarledquinApp">
+
+<head>
+  <title>Harledquin</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bower:css -->
+  <!-- endinject -->
+  <style>
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    h1.header {
+      font-family: monospace;
+      font-size: 6rem;
+    }
+
+    .colorpicker {
+      width: 100%;
+      height: 70px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body ng-controller="AppCtrl">
+
+  <div class="container">
+
+    <header>
+      <h1 class="header">HarLEDqueen</h1>
+    </header>
+
+    <div class="row" ng-repeat="led in leds track by $index">
+      <div class="column">
+        <input class="colorpicker" type="color" ng-change="updateColors()" ng-model="leds[$index]">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <h4>Model</h4>
+        <pre><code>{{ leds | json }}</code></pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <h4>Payload</h4>
+        <pre><code>{{ payload | json }}</code></pre>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- bower:js -->
+  <!-- endinject -->
+  <script src="app.js"></script>
+  <script src="mapper.service.js"></script>
+</body>
+
+</html>
